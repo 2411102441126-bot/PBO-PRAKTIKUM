@@ -1,0 +1,46 @@
+# --- Analisis File Sederhana ---
+
+from collections import Counter
+
+def analisis_file(nama_file):
+    try:
+        # Membuka file dalam mode baca
+        with open(nama_file, 'r', encoding='utf-8') as file:
+            isi_file = file.read()
+
+        # Hitung jumlah baris, kata, dan karakter
+        jumlah_baris = len(isi_file.splitlines())
+        kata = isi_file.split()
+        jumlah_kata = len(kata)
+        jumlah_karakter = len(isi_file)
+
+        # Hitung kata yang paling sering muncul
+        hitung_kata = Counter(kata)
+        kata_terbanyak = hitung_kata.most_common(1)[0]
+
+        # Tampilkan hasil analisis
+        print("=== HASIL ANALISIS FILE ===")
+        print(f"Nama File        : {nama_file}")
+        print(f"Jumlah Baris     : {jumlah_baris}")
+        print(f"Jumlah Kata      : {jumlah_kata}")
+        print(f"Jumlah Karakter  : {jumlah_karakter}")
+        print(f"Kata Terbanyak   : '{kata_terbanyak[0]}' muncul sebanyak {kata_terbanyak[1]} kali")
+
+    except FileNotFoundError:
+        print(f"Error: File '{nama_file}' tidak ditemukan!")
+    except Exception as e:
+        print(f"Terjadi kesalahan: {e}")
+
+
+# --- Bagian Utama Program ---
+# Buat file contoh (jika belum ada)
+contoh_teks = """Python adalah bahasa pemrograman yang populer.
+Python mudah dipelajari dan digunakan.
+Analisis file sederhana ini dibuat menggunakan Python.
+"""
+
+with open("data_teks.txt", "w", encoding="utf-8") as f:
+    f.write(contoh_teks)
+
+# Jalankan analisis pada file
+analisis_file("data_teks.txt")

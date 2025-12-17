@@ -1,0 +1,3 @@
+Python adalah bahasa pemrograman yang populer.
+Python mudah dipelajari dan digunakan.
+Analisis file sederhana ini dibuat menggunakan Python.
