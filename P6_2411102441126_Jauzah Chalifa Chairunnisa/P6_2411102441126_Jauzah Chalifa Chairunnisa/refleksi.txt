@@ -1,5 +1,0 @@
-Dalam praktikum modularisasi ini, saya belajar bagaimana membangun program Python dengan cara membaginya menjadi beberapa bagian kecil yang disebut modul. Setiap modul memiliki fungsi atau class tertentu yang berdiri sendiri, lalu digabungkan kembali di file utama agar program berjalan utuh. Pendekatan ini membuat kode lebih terstruktur, mudah dibaca, dan tidak membingungkan ketika program mulai berkembang menjadi lebih besar.
-
-Saya juga mengenal kegunaan dari baris if __name__ == "__main__":, yang berfungsi untuk mengatur kapan bagian tertentu dari kode dijalankan. Dengan adanya perintah tersebut, modul tidak akan langsung dieksekusi saat diimpor ke file lain, sehingga kita bisa menjaga agar kode tetap bersih dan terkontrol.
-
-Di awal percobaan, saya sempat mengalami error karena penempatan folder belum sesuai dan file __init__.py belum dibuat. Setelah struktur folder diperbaiki, semua modul bisa diimpor dengan benar dan hasil perhitungannya sesuai. Dari pengalaman ini, saya menyadari bahwa modularisasi bukan hanya soal memecah kode, tapi juga tentang bagaimana mengatur dan mengelola program agar lebih efisien serta profesional.
